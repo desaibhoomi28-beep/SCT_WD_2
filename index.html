@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="sw-wrap">
+
+    <p class="sw-title">⏱ &nbsp;Stopwatch</p>
+    <div class="sw-clock-card">
+      <div class="sw-time" id="display">00:00</div>
+      <div class="sw-ms" id="display-ms">.000</div>
+
+      <div class="sw-btn-row">
+        <button class="btn btn-lap" id="btn-lap" disabled onclick="recordLap()">🏁 Lap</button>
+        <button class="btn btn-start" id="btn-main" onclick="toggleStartPause()">▶ Start</button>
+        <button class="btn btn-reset" id="btn-reset" disabled onclick="resetWatch()">↺ Reset</button>
+      </div>
+    </div>
+
+ 
+    <div class="sw-lap-section" id="lap-section">
+      <div class="lap-header">
+        <span>Lap</span>
+        <span>Split</span>
+        <span>Total</span>
+      </div>
+      <ul class="lap-list" id="lap-list"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
